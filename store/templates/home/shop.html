@@ -1,0 +1,406 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ ASSETS_ROOT }}/css/sol.css">
+    
+    <title>DISENO ENERGY</title>
+    <script src="https://kit.fontawesome.com/c112fd7a68.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav id="nav">
+        <div class="navTop">
+            <div class="navItem">
+                <img src="./img/.png" alt="DISENO ENERGY">
+            </div>
+            <div class="navItem">
+                <div class="search">
+                    <input type="text" placeholder="Search..." class="searchInput">
+                    <img src="./img/search.png" width="20" height="20" alt="" class="searchIcon">
+                </div>
+            </div>
+            <div class="navItem">
+                <span class="limitedOffer">Limited Offer!</span>
+            </div>
+        </div>
+        <div class="navBottom">
+            <h3 class="menuItem">INVERTORS</h3>
+            <h3 class="menuItem">HYBRID-INVERTORS</h3>
+            <h3 class="menuItem">SOLAR-PANELS</h3>
+            
+           
+        </div>
+    </nav>
+    
+    <div class="slider">
+        <div class="sliderWrapper">
+            <div class="sliderItem">
+                <img src="{{ ASSETS_ROOT }}/img/lita.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">{{products.product_title}}</br></br>Invertors </h1>
+                <h2 class="sliderPrice">{{products.product_price}}</h2>
+                <a href="#product-1">
+                    <button class="buyButton">ORDER NOW!</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="{{ ASSETS_ROOT }}/img/gold.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">{{prod.product_title}}</br> PERFECT</br> FOR A FAMILY</h1>
+                <h2 class="sliderPrice">{{prod.product_price}}</h2>
+                <a href="#product-1">
+                    <button class="buyButton">SHOP NOW!</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="{{ ASSETS_ROOT }}/img/platnum.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">{{pro.product_title}}</br> POWER</br> USAGE</h1>
+                <h2 class="sliderPrice">{{pro.product_price}}</h2>
+                <a href="#product-1">
+                    <button class="buyButton">SHOP NOW!</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="{{ ASSETS_ROOT }}/img/inclusive.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">ALL</br> IN</br> ONE</h1>
+                <h2 class="sliderPrice">$129</h2>
+                <a href="product-1">
+                    <button class="buyButton">SHOP NOW!</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="{{ ASSETS_ROOT }}/img/hybrid.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">HYRID</br> SOLAR</br> INVERTOR</h1>
+                <h2 class="sliderPrice">$99</h2>
+                <a href="product-1">
+                    <button class="buyButton">SHOP NOW!</button>
+                </a>
+            </div>
+        </div>
+    </div>
+   
+    <div class="features">
+        <div class="feature">
+            <img class="featureIcon" src="{{ ASSETS_ROOT }}/img/shipping.png" alt="">
+            <span class="featureTitle">FREE SHIPPING</span>
+            <span class="featureDesc">Free worldwide shipping on all orders.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="{{ ASSETS_ROOT }}/img/inclusive.png" alt="">
+
+            <span class="featureTitle">30 DAYS RETURN</span>
+            <span class="featureDesc">No question return and easy refund in 14 days.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="{{ ASSETS_ROOT }}/img/gift.png" alt="">
+            <span class="featureTitle">GIFT CARDS</span>
+            <span class="featureDesc">Buy gift cards and use coupon codes easily.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="{{ ASSETS_ROOT }}/img/contact.png" alt="">
+            <span class="featureTitle">CONTACT US!</span>
+            <span class="featureDesc">Keep in touch via email and support system.</span>
+        </div>
+    </div>
+
+    
+    
+
+    
+
+
+    
+
+
+    
+ <section id="product-1" class="section-p1">
+    <h2 class='prod'>Featured Products</h2>
+    <p class='prod'>Mobile Power Solutions</p>
+    {% for shopa in object_list %}
+    <div class="pro-container">
+        <div class="pro">
+            <img src="{{ ASSETS_ROOT }}/img/hybrid.png" alt="">
+            <div class="des">
+                <span><a href = {{shopa.get_absolute_url}}>{{shopa.product_title}}</a></span>
+                <h5>{{shopa.product_desc}}</h5>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <h4>{{shop.product_price}}</h4>
+            </div>
+            <a href="#"><i class="fa-duotone fa-cart-circle-check cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="{{ ASSETS_ROOT }}/img/inv.jpg" alt="">
+            <div class="des">
+                <span>solar</span>
+                <h5>solar panels</h5>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a href="#"><i class="fa-duotone fa-cart-circle-check cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="{{ ASSETS_ROOT }}/img/inv.jpg" alt="">
+            <div class="des">
+                <span>invertors</span>
+                <h5>traditional invertors</h5>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a href="#"><i class="fa-duotone fa-cart-circle-check cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="{{ ASSETS_ROOT }}/img/contra.jpg" alt="">
+            <div class="des">
+                <span>controller</span>
+                <h5>controller for lite usage</h5>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a href="#"><i class="fa-duotone fa-cart-circle-check cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="{{ ASSETS_ROOT }}/img/controller.jpg" alt="">
+            <div class="des">
+                <span>controller</span>
+                <h5>controller for heavy usage</h5>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a href="#"><i class="fa-duotone fa-cart-circle-check cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="{{ ASSETS_ROOT }}/img/inv.jpg" alt="">
+            <div class="des">
+                <span>invertors</span>
+                <h5>hybrid solar invertors</h5>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a href="#"><i class="fa-duotone fa-cart-circle-check cart"></i></a>
+        </div>
+    </div>
+    {% endfor %}
+
+
+ </section>
+
+ <section id="pagination" class="section-p1">
+    <a href="">1</a>
+    <a href="">1</a>
+    <a href=""><i class="fal fa-long-arrow-alt-right"></i></a>
+    <i class="fa-solid fa-360-degrees"></i>
+ </section>
+
+
+
+
+
+
+    
+    <footer>
+        <div class="footerLeft">
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">About Us</h1>
+                <ul class="fList">
+                    <li class="fListItem">Company</li>
+                    <li class="fListItem">Contact</li>
+                    <li class="fListItem">Careers</li>
+                    <li class="fListItem">Affiliates</li>
+                    <li class="fListItem">Stores</li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Useful Links</h1>
+                <ul class="fList">
+                    <li class="fListItem">Support</li>
+                    <li class="fListItem">Refund</li>
+                    <li class="fListItem">FAQ</li>
+                    <li class="fListItem">Feedback</li>
+                    <li class="fListItem">Stories</li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Products</h1>
+                <ul class="fList">
+                    <li class="fListItem">DISENO-LITE</li>
+                    <li class="fListItem">DISENO-GOLD</li>
+                    <li class="fListItem">DISENO-PLATNUM</li>
+                    <li class="fListItem">CUSTOM</li>
+                    <li class="fListItem">INVERTORS</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerRight">
+            <div class="footerRightMenu">
+                <h1 class="fMenuTitle">Subscribe to our newsletter</h1>
+                <div class="fMail">
+                    <input type="text" placeholder="your@email.com" class="fInput">
+                    <button class="fButton">Join!</button>
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <h1 class="fMenuTitle">Follow Us</h1>
+                <div class="fIcons">
+                    <img src="./img/facebook.png" alt="" class="fIcon">
+                    <img src="./img/twitter.png" alt="" class="fIcon">
+                    <img src="./img/instagram.png" alt="" class="fIcon">
+                    <img src="./img/whatsapp.png" alt="" class="fIcon">
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <span class="copyright">@diseno. All rights reserved. 2022.</span>
+            </div>
+        </div>
+    </footer>
+    {% include 'includes/scripts.html' %}
+
+    <script>
+        $(document).ready(function(){
+            $('#gold').click(function(){
+                $('').toggle(1000);
+            });
+        });
+
+        $(document).ready(function(){
+            $('.orderButton').click(function(){
+                $('.payment').toggle();
+                
+            });
+        });
+
+        $(document).ready(function(){
+            $('.close').click(function(){
+                $('.payment').hide();
+                
+            });
+        });
+
+        $(document).ready(function(){
+            $('#lite').click(function(){
+                $('').toggle(1000);
+            });
+        });
+
+        $(document).ready(function(){
+            $('.liteButton').click(function(){
+                $('.payment').toggle();
+                
+            });
+        });
+
+        $(document).ready(function(){
+            $('.close').click(function(){
+                $('.payment').hide();
+                
+            });
+        });
+
+        $(document).ready(function(){
+            $('#plat').click(function(){
+                $('').toggle(1000);
+            });
+        });
+
+        $(document).ready(function(){
+            $('.platButton').click(function(){
+                $('.payment').toggle();
+                
+            });
+        });
+
+        $(document).ready(function(){
+            $('.close').click(function(){
+                $('.payment').hide();
+                
+            });
+        }); 
+        
+        $(document).ready(function(){
+            $('#inv').click(function(){
+                $('').toggle(1000);
+            });
+        });
+
+        $(document).ready(function(){
+            $('.invButton').click(function(){
+                $('.payment').toggle();
+                
+            });
+        });
+
+        $(document).ready(function(){
+            $('.close').click(function(){
+                $('.payment').hide();
+                
+            });
+        });
+
+        $(document).ready(function(){
+            $('#custom').click(function(){
+                $('').toggle(1000);
+            });
+        });
+
+        $(document).ready(function(){
+            $('.customButton').click(function(){
+                $('.payment').toggle();
+                
+            });
+        });
+
+        $(document).ready(function(){
+            $('.close').click(function(){
+                $('.payment').hide();
+                
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

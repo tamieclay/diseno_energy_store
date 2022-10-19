@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Diseno - {% block title %}{% endblock %} | Energy
+    </title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Meta -->
+    <html lang="en">
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+   
+    <script src="https://kit.fontawesome.com/c112fd7a68.js" crossorigin="anonymous"></script>
+
+    
+
+    
+      <!-- main  css -->
+      <link rel="stylesheet" href="{{ ASSETS_ROOT }}/css/energy.css">
+
+    <!-- Specific CSS goes HERE -->
+    {% block stylesheets %}{% endblock stylesheets %}
+
+</head>
+<body>
+    <nav id="nav">
+        <div class="navTop">
+            <div class="navItem">
+                <img src="./img/.png" alt="DISENO ENERGY">
+            </div>
+            <div class="navItem">
+                <div class="search">
+                    <input type="text" placeholder="Search..." class="searchInput">
+                    <img src="./img/search.png" width="20" height="20" alt="" class="searchIcon">
+                </div>
+            </div>
+            <div class="navItem">
+                <span class="limitedOffer">Limited Offer!</span>
+            </div>
+        </div>
+        <div class="navBottom">
+            <h3 class="menuItem">DISENO-LITE</h3>
+            <h3 class="menuItem">DISENO-GOLD</h3>
+            <h3 class="menuItem">DISENO-PLATNUM</h3>
+            <h3 class="menuItem">CUSTOM</h3>
+            <h3 class="menuItem">INVERTOR</h3>
+            <h3 class="menuItem">SHOP</h3>
+        </div>
+    </nav>
+    <div class="slider">
+        <div class="sliderWrapper">
+            <div class="sliderItem">
+                <img src="./img/lite.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">DISENO LITE</br> FOR LIGHT</br> USERS</h1>
+                <h2 class="sliderPrice">$119</h2>
+                <a href="#product">
+                    <button class="buyButton">ORDER NOW!</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="./img/gold.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">DISENO GOLD</br> PERFECT</br> FOR A FAMILY</h1>
+                <h2 class="sliderPrice">$149</h2>
+                <a href="#product">
+                    <button class="buyButton">BUY NOW!</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="./img/platnum.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">HEAVY</br> POWER</br> USAGE</h1>
+                <h2 class="sliderPrice">$109</h2>
+                <a href="#product">
+                    <button class="buyButton">ORDER NOW!</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="./img/inclusive.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">ALL</br> IN</br> ONE</h1>
+                <h2 class="sliderPrice">$129</h2>
+                <a href="#product">
+                    <button class="buyButton">ORDER NOW!</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="./img/hybrid.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">HYRID</br> SOLAR</br> INVERTOR</h1>
+                <h2 class="sliderPrice">$99</h2>
+                <a href="#product">
+                    <button class="buyButton">ORDER NOW!</button>
+                </a>
+            </div>
+        </div>
+    </div>
+   
+    <div class="features">
+        <div class="feature">
+            <img src="./img/shipping.png" alt="" class="featureIcon">
+            <span class="featureTitle">FREE SHIPPING</span>
+            <span class="featureDesc">Free worldwide shipping on all orders.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/return.png" alt="">
+            <span class="featureTitle">30 DAYS RETURN</span>
+            <span class="featureDesc">No question return and easy refund in 14 days.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/gift.png" alt="">
+            <span class="featureTitle">GIFT CARDS</span>
+            <span class="featureDesc">Buy gift cards and use coupon codes easily.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/contact.png" alt="">
+            <span class="featureTitle">CONTACT US!</span>
+            <span class="featureDesc">Keep in touch via email and support system.</span>
+        </div>
+    </div>
+
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+
+    {% include 'includes/navbar.html' %}
+
+
+
+
+    {% block content %}{% endblock content %}
+
+    {% include 'includes/mainscript.html' %}
+
+    <!-- Specific Page JS goes HERE  -->
+    {% block javascripts %}{% endblock javascripts %}
+
+</body>
+</html>
